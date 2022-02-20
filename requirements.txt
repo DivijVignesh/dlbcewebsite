@@ -41,7 +41,7 @@ HeapDict==1.0.1
 
 json5==0.9.5
 
-
+whitenoise==6.0.0
 
 
 
