@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="./assets/css/node_modules/bootstrap/dist/css/bootstrap.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <!-- <link rel="stylesheet" href="./assets/css/bootstrap.css"> -->
+
+    <link href="{% static 'mycss.css'%}" rel="stylesheet">
+
+</head>
+
+
+<body>
+    <!-- header  -->
+<div style="background-color:rgb(255, 255, 255)">
+        <div class="container-fluid text-uppercase  ">
+
+            <div class="text-left p-3" style="background-color: rgb(255, 255, 255);color: #2f1166;">
+                <div class="row">
+                    <div class="col-md-2 px-2 d-flex justify-content-center"><img src="{% static 'img/logo.jpeg'%}" alt="" class="img rounded-circle " width="110rem">
+                    </div>
+
+                    <div class="col-md-7 px-2 align-left " style="font-family:  Roboto;">
+                        <h4> Dr.LANKaPALLI BULLAYyA COLLEGE of
+                            engineering<br>
+                        </h4>
+                        <div class="clss"
+                            style="color: rgb(56, 187, 126);font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: bold;">
+                            <h6>Sponsered by socity of collegiate Education<br>Approved by AICTE affiliated to Andhra
+                                Univercity</h6>
+                            <hr>
+
+                        </div>
+                    </div>
+                    <div class="col-md-2 float-end py-4"
+                        style="font-style: italic; font-weight: bold;">
+                        <h6> EAPCET CODE/ECET </h6>
+                        <div class="clss" style="color: rgb(56, 187, 126);">
+                            <h4>DLBC</h4>
+                        </div>
+                    </div>
+                <div class="col-md-1 float-end py-4 d-none d-md-block blink_me "
+                        style="font-style: italic; font-weight: bold;">
+                        <h6> years of excellency </h6>
+                        <div class="clss" style="color: rgb(56, 187, 126);">
+                            <h4>12</h4>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- end of header  -->
+
+    <!-- navbar -->
+    <nav id="navbar_top" class="shadow-sm pb-3 navbar sticky-top navbar-expand-md navbar-light bg-light ">
+        <div class="container">
+            <button class="navbar-toggler float-end" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 flex-fill flex-wrap justify-content-center">
+                    <li class="nav-item ">
+                        <a class="nav-link active " aria-current="page" href="{% url 'civilhome'%}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{% url 'civilprofile'%}">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{% url 'civilhod'%}" tabindex="-1" aria-disabled="true">HOD</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{% url 'civilfaculty'%}" tabindex="-1" aria-disabled="true">Faculty</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{% url 'civilactivities'%}" tabindex="-1" aria-disabled="true">Activities</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                            aria-expanded="false">Departments
+
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="{% url 'csehome'%}">CSE</a></li>
+                            <li><a class="dropdown-item" href="{% url 'civilhome'%}">CIVIL</a></li>
+
+                            <li><a class="dropdown-item" href="{% url 'ecehome'%}">ECE</a></li>
+                            <li><a class="dropdown-item" href="{% url 'eeehome'%}">EEE</a></li>
+
+                            <li><a class="dropdown-item" href="{% url 'bshome'%}">BASIC SCIENCES</a></li>
+                        </ul>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link active" href="#" tabindex="-1" aria-disabled="true">AICTE</a>
+                    </li> -->
+                    <li class="nav-item dropdown">
+                        <a class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                            aria-expanded="false">AICTCE
+
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="">Mandatory Discloser</a></li>
+                            <li><a class="dropdown-item" href="">Feedback</a></li>
+                            <li><a class="dropdown-item" href="">Anti- Ragging Committe</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{% url 'home'%}">Main Home</a>
+                    </li> 
+                </ul>
+
+
+            </div>
+        </div>
+    </nav>
+    <!-- ending of navbar -->
+    <!-- starting of body -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h3 class="p-4">
+                    PROFILE(CIVIL)
+                </h3>
+                <h4 class="p-1">
+                    Dr.L.B.College of Engneering <br>
+
+                    Department of CIVIL Engineering
+                </h4>
+            </div>
+        </div>
+        <div class="row">
+            <h5 class="p-1">
+                1. Pedagogy of Branch:
+            </h5>
+            <p class="p-2">
+                Welcome to the Department of CIVIL Engineering which is one of the Oldest and Basic Engineering. It was
+                established on 2010 with an intake of 60 students affiliated to ANDHRA UNIVERSITY, Visakhapatnam. The
+                Department offers a four-year course leading to the Bachelors Degree in Civil Engineering. The
+                department is organized in to __SEVEN___ major divisions as Transportation Engineering division, Water
+                resources Engineering division, Geo Technical Engineering division, Construction Planning and Management
+                division, RS & GIS Division, Environmental Engineering division and Structures division. A part from the
+                above major divisions with the help of Mechanical Engineering department this department continuously
+                supporting remaining departments both in theoretical and laboratory subjects especially where it
+                requires (Engineering Drawing, Work shop, Thermal Prime Movers and Fluid Mechanics & Hydraulic Machinery
+                in both theory & Laboratory.
+                The faculties have broad experience in Construction Consultancy, Industry, Training, Field Experience,
+                Research as well as teaching which will help the students to gain practical knowledge which is very
+                essential for their future endeavours.
+            </p>
+            <p class="p-2">
+                Our graduates possess the skills, knowledge and attitudes necessary to improve the quality of life for
+                many people through engineering practice. We strive hard continuously to make the students aware of the
+                latest technological developments by imparting quality education and organizing various departmental
+                activities such as industry visits, guest lectures, skill development trailing etc. for the holistic
+                development as a professional engineer.
+            </p>
+            <h6 class="p-1">
+                Program Educational Objectives
+            </h6>
+            <ul class="px-5">
+
+                <li>
+                    Graduates will attain a record of engagement in civil engineering or other fields that require
+                    analytical and/or professional abilities.
+                </li>
+                <li>
+                    Graduates will attain a record of continuing professional development.
+                </li>
+                <li>
+                    Graduates will attain a record of contributions to their fields, professions, or society.
+                </li>
+            </ul>
+            <h6 class="p-1">
+                Program Goals
+            </h6>
+            <ul class="p-4">
+                The civil engineering degree program seeks to prepare students to be successful professionals recognized
+                for their:
+                <li>
+                    Critical thinking and problem solving based on a fundamental knowledge of humanities, social
+                    sciences, mathematics, science, engineering science and a broad range of civil engineering technical
+                    areas
+                </li>
+                <li>Consideration of global and societal concerns, ethics, and sustainability when making engineering
+                    decisions
+
+                </li>
+                <li>
+                    Leadership and effective communication;
+                </li>
+                <li>
+                    Civic engagement and contributions to society;
+
+                </li>
+                <li>
+                     Pursuit of lifelong learning and professional development.
+                </li>
+            </ul>
+            <h6 class="p-1">
+                The Outcomes from the Students
+            </h6>
+            <ul class="p-4">
+                Graduates of the civil engineering degree program will have:
+                <li>
+                    (a) an ability to apply knowledge of mathematics, science, and engineering;
+                </li>
+                <li>
+                    (b) an ability to design and conduct experiments, as well as to analyze and interpret data;
+                </li>
+                <li>
+                    (c) an ability to design a system, component, or process to meet desired needs within realistic constraints such as economic, environmental, social, political, ethical, health and safety, manufacturability, and sustainability.
+                </li>
+                <li>
+                    (d) An ability to function on multidisciplinary teams;
+                </li>
+                <li>
+                    (e) an ability to identify, formulate, and solve engineering problems;
+                </li>
+                <li>
+                    (f) an understanding of professional and ethical responsibility;
+                </li>
+                <li>
+                    (g) an ability to communicate effectively;
+                </li>
+                <li>
+                    (h) the broad education necessary to understand the impact of engineering solutions in a global, economic, environmental, and societal context.
+                </li>
+                <li>
+                    (i) a recognition of the need for, and an ability to engage in life-long learning;
+                </li>
+                <li>
+                    (j) a knowledge of contemporary issues;
+                </li>
+                <li>
+                    (k) an ability to use the techniques, skills, and modern engineering tools necessary for engineering practice.
+                </li>
+            </ul>
+            <h5 class="p-1">
+                2.Student Toppers (2016-17)
+            </h5>
+            <h6 class="p-1">
+                II – Year:
+            </h6>
+            <h6 class="p-1">
+                I – Semester :
+            </h6>
+            <table class="table table-primary">
+                <tr class="table-primary">
+                    <td class="table-primary">
+                        Sno.
+                    </td>
+                    <td class="table-primary">
+                        Register No
+                    </td>
+                    <td class="table-primary">
+                        Name of the student
+                    </td>
+                    <td class="table-primary">
+                        SGPA
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-light">
+                        1
+                    </td>
+                    <td class="table-light">
+                        315136408040
+                    </td>
+                    <td class="table-light">
+                        N. Devi
+                    </td>
+                    <td class="table-light">
+                        8.73
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-light">
+                        2
+                    </td>
+                    <td class="table-light">
+                        315136408029
+                    </td>
+                    <td class="table-light">
+                        G. Mounika Devi
+                    </td>
+                    <td class="table-light">
+                        8.64
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-light">
+                        3
+                    </td>
+                    <td class="table-light">
+                        315136408034
+                    </td>
+                    <td class="table-light">
+                        K. Sunitha Priyanka
+                    </td>
+                    <td class="table-light">
+                        8.55
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-light">
+                        4
+                    </td>
+                    <td class="table-light">
+                        315136408038
+                    </td>
+                    <td class="table-light">
+                        M. Mercy Mani Ratna PRiyaRatna
+                    </td>
+                    <td class="table-light">
+                        8.52
+                    </td>
+                </tr>
+            </table>
+            <h6 class="p-1">
+                II – Semester :
+            </h6>
+            <table class="table table-primary">
+                <tr class="table-primary">
+                    <td class="table-primary">
+                        Sno.
+                    </td>
+                    <td class="table-primary">
+                        Register No
+                    </td>
+                    <td class="table-primary">
+                        Name of the student
+                    </td>
+                    <td class="table-primary">
+                        SGPA
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-light">
+                        1
+                    </td>
+                    <td class="table-light">
+                        315136408038
+                    </td>
+                    <td class="table-light">
+                        M. Mercy Mani Ratna PRiyaRatna
+                    </td>
+                    <td class="table-light">
+                        8.57
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-light">
+                        2
+                    </td>
+                    <td class="table-light">
+                        315136408040
+                    </td>
+                    <td class="table-light">
+                        N. Devi
+                    </td>
+                    <td class="table-light">
+                        8.51
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-light">
+                        3
+                    </td>
+                    <td class="table-light">
+                        315136408029
+                    </td>
+                    <td class="table-light">
+                        G. Mounika Devi
+                    </td>
+                    <td class="table-light">
+                        8.36
+                    </td>
+                </tr>
+            </table>
+            <table class="table table-primary">
+                <tr class="table-primary">
+                    <td class="table-primary">
+                        Sno.
+                    </td>
+                    <td class="table-primary">
+                        Register No
+                    </td>
+                    <td class="table-primary">
+                        Name of the student
+                    </td>
+                    <td class="table-primary">
+                        SGPA
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-light">
+                        1
+                    </td>
+                    <td class="table-light">
+                        315136408040
+                    </td>
+                    <td class="table-light">
+                        N. Devi
+                    </td>
+                    <td class="table-light">
+                        8.62
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-light">
+                        2
+                    </td>
+                    <td class="table-light">
+                        315136408038
+                    </td>
+                    <td class="table-light">
+                        M. Mercy Mani Ratna PRiyaRatna
+                    </td>
+                    <td class="table-light">
+                        8.54
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-light">
+                        3
+                    </td>
+                    <td class="table-light">
+                        315136408029
+                    </td>
+                    <td class="table-light">
+                        G. Mounika Devi
+                    </td>
+                    <td class="table-light">
+                        8.51
+                    </td>
+                </tr>
+            </table>
+            <h6 class="p-1">
+                III – Year :
+            </h6>
+            <h6 class="p-1">
+                I – Semester :
+            </h6>
+            <table class="table table-primary">
+                <tr class="table-primary">
+                    <td class="table-primary">
+                        Sno.
+                    </td>
+                    <td class="table-primary">
+                        Register No
+                    </td>
+                    <td class="table-primary">
+                        Name of the student
+                    </td>
+                    <td class="table-primary">
+                        SGPA
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-light">
+                        1
+                    </td>
+                    <td class="table-light">
+                        314136408031
+                    </td>
+                    <td class="table-light">
+                        V. Sireesha
+                    </td>
+                    <td class="table-light">
+                        8.79
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-light">
+                        2
+                    </td>
+                    <td class="table-light">
+                        314136408049
+                    </td>
+                    <td class="table-light">
+                        M. M. Jyoshna Devi
+                    </td>
+                    <td class="table-light">
+                        8.62
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-light">
+                        3
+                    </td>
+                    <td class="table-light">
+                        314136408014
+                    </td>
+                    <td class="table-light">
+                        G.Amulya
+                    </td>
+                    <td class="table-light">
+                        8.52
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-light">
+                        4
+                    </td>
+                    <td class="table-light">
+                        314136408039
+                    </td>
+                    <td class="table-light">
+                        G.V.N. Shravani
+                    </td>
+                    <td class="table-light">
+                        8.45
+                    </td>
+                </tr>
+            </table>
+            <h6 class="p-1">
+                II – Semester :
+            </h6>
+            <table class="table table-primary">
+                <tr class="table-primary">
+                    <td class="table-primary">
+                        Sno.
+                    </td>
+                    <td class="table-primary">
+                        Register No
+                    </td>
+                    <td class="table-primary">
+                        Name of the student
+                    </td>
+                    <td class="table-primary">
+                        SGPA
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-light">
+                        1
+                    </td>
+                    <td class="table-light">
+                        314136408031
+                    </td>
+                    <td class="table-light">
+                        V. Sireesha
+                    </td>
+                    <td class="table-light">
+                        8.29
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-light">
+                        2
+                    </td>
+                    <td class="table-light">
+                        314136408049
+                    </td>
+                    <td class="table-light">
+                        M. M. Jyoshna Devi
+                    </td>
+                    <td class="table-light">
+                        8.00
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-light">
+                        3
+                    </td>
+                    <td class="table-light">
+                        314136408014
+                    </td>
+                    <td class="table-light">
+                        G.Amulya
+                    </td>
+                    <td class="table-light">
+                        7.93
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-light">
+                        4
+                    </td>
+                    <td class="table-light">
+                        314136408039
+                    </td>
+                    <td class="table-light">
+                        G.V.N. Shravani
+                    </td>
+                    <td class="table-light">
+                        7.93
+                    </td>
+                </tr>
+            </table>
+            <table class="table table-primary">
+                <tr class="table-primary">
+                    <td class="table-primary">
+                        Sno.
+                    </td>
+                    <td class="table-primary">
+                        Register No
+                    </td>
+                    <td class="table-primary">
+                        Name of the student
+                    </td>
+                    <td class="table-primary">
+                        SGPA
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-light">
+                        1
+                    </td>
+                    <td class="table-light">
+                        315136408040
+                    </td>
+                    <td class="table-light">
+                        V. Sireesha
+                    </td>
+                    <td class="table-light">
+                        8.32
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-light">
+                        2
+                    </td>
+                    <td class="table-light">
+                        314136408039
+                    </td>
+                    <td class="table-light">
+                        G.V.N. Shravani
+                    </td>
+                    <td class="table-light">
+                        7.95
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-light">
+                        3
+                    </td>
+                    <td class="table-light">
+                        314136408036
+                    </td>
+                    <td class="table-light">
+                        B. Lakshmi
+                    </td>
+                    <td class="table-light">
+                        7.93
+                    </td>
+                </tr>
+            </table>
+            <h6 class="p-1">
+                IV – Year :
+            </h6>
+            <h6 class="p-1">
+                I – Semester :
+            </h6>
+            <table class="table table-primary">
+                <tr class="table-primary">
+                    <td class="table-primary">
+                        Sno.
+                    </td>
+                    <td class="table-primary">
+                        Register No
+                    </td>
+                    <td class="table-primary">
+                        Name of the student
+                    </td>
+                    <td class="table-primary">
+                        SGPA
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-light">
+                        1
+                    </td>
+                    <td class="table-light">
+                        313136408037
+                    </td>
+                    <td class="table-light">
+                        M. Padma Priya
+                    </td>
+                    <td class="table-light">
+                        9.27
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-light">
+                        2
+                    </td>
+                    <td class="table-light">
+                        313136408019
+                    </td>
+                    <td class="table-light">
+                        N. Meghana
+                    </td>
+                    <td class="table-light">
+                        9.07
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-light">
+                        3
+                    </td>
+                    <td class="table-light">
+                        313136408033
+                    </td>
+                    <td class="table-light">
+                        G. Divya
+                    </td>
+                    <td class="table-light">
+                        9.07
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-light">
+                        4
+                    </td>
+                    <td class="table-light">
+                        313136408008
+                    </td>
+                    <td class="table-light">
+                        D. Srilatha
+                    </td>
+                    <td class="table-light">
+                        8.87
+                    </td>
+                </tr>
+            </table>
+            <h6 class="p-1">
+                II – Semester :
+            </h6>
+            <table class="table table-primary">
+                <tr class="table-primary">
+                    <td class="table-primary">
+                        Sno.
+                    </td>
+                    <td class="table-primary">
+                        Register No
+                    </td>
+                    <td class="table-primary">
+                        Name of the student
+                    </td>
+                    <td class="table-primary">
+                        SGPA
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-light">
+                        1
+                    </td>
+                    <td class="table-light">
+                        313136408029
+                    </td>
+                    <td class="table-light">
+                        Ch. Naimeesha
+                    </td>
+                    <td class="table-light">
+                        9.45
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-light">
+                        2
+                    </td>
+                    <td class="table-light">
+                        313136408038
+                    </td>
+                    <td class="table-light">
+                        S. Nirosha
+                    </td>
+                    <td class="table-light">
+                        9.27
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-light">
+                        3
+                    </td>
+                    <td class="table-light">
+                        313136408023
+                    </td>
+                    <td class="table-light">
+                        B. Sanjana Reddy
+                    </td>
+                    <td class="table-light">
+                        9.18
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-light">
+                        4
+                    </td>
+                    <td class="table-light">
+                        313136408034
+                    </td>
+                    <td class="table-light">
+                        G. Bharathi
+                    </td>
+                    <td class="table-light">
+                        9.09
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-light">
+                        5
+                    </td>
+                    <td class="table-light">
+                        313136408037
+                    </td>
+                    <td class="table-light">
+                        M. Padma Priya
+                    </td>
+                    <td class="table-light">
+                        9.09
+                    </td>
+                </tr>
+            </table>
+            <table class="table table-primary">
+                <tr class="table-primary">
+                    <td class="table-primary">
+                        Sno.
+                    </td>
+                    <td class="table-primary">
+                        Register No
+                    </td>
+                    <td class="table-primary">
+                        Name of the student
+                    </td>
+                    <td class="table-primary">
+                        SGPA
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-light">
+                        1
+                    </td>
+                    <td class="table-light">
+                        313136408010
+                    </td>
+                    <td class="table-light">
+                        J. Asha Jyothi
+                    </td>
+                    <td class="table-light">
+                        8.74
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-light">
+                        2
+                    </td>
+                    <td class="table-light">
+                        313136408037
+                    </td>
+                    <td class="table-light">
+                        M. Padma Pria
+                    </td>
+                    <td class="table-light">
+                        8.65
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-light">
+                        3
+                    </td>
+                    <td class="table-light">
+                        313136408008
+                    </td>
+                    <td class="table-light">
+                        D. Srilatha
+                    </td>
+                    <td class="table-light">
+                        8.64
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-light">
+                        4
+                    </td>
+                    <td class="table-light">
+                        313136408033
+                    </td>
+                    <td class="table-light">
+                        G. Divya
+                    </td>
+                    <td class="table-light">
+                        8.54
+                    </td>
+                </tr>
+            </table>
+            <h5 class="p-1">
+                3. List of Subjects and Labs: (held in 2016-2017)
+            </h5>
+            <table class="table table-primary">
+                <tr class="table-primary">
+                    <td class="table-primary" colspan="2">
+                        I Year
+                    </td>
+                    <td class="table-primary" colspan="2">
+                        II- Year
+                    </td>
+                    <td class="table-primary" colspan="2">
+                        III Year
+                    </td>
+                    <td class="table-primary" colspan="2">
+                        IV Year
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        I
+                    </td>
+                    <td>
+                        II
+                    </td>
+                    <td>
+                        I
+                    </td>
+                    <td>
+                        II
+                    </td>
+                    <td>
+                        I
+                    </td>
+                    <td>
+                        II
+                    </td>
+                    <td>
+                        I
+                    </td>
+                    <td>
+                        II
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-light">
+                        English
+                    </td>
+                    <td class="table-light">
+                        Mathamatics-III
+                    </td>
+                    <td class="table-light">
+                        Mathamatics-IV
+                    </td>
+                    <td class="table-light">
+                        Structual Analysis-I
+                    </td>
+                    <td class="table-light">
+                        Reinforced concrete stuctures-I
+                    </td>
+                    <td class="table-light">
+                        Structural Analysis-II
+                    </td>
+                    <td class="table-light">
+                        Water resources Engineering – I
+                    </td>
+                    <td class="table-light">
+                        Transportation Engineering – II
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-light">
+                        Mathematics-I
+                    </td>
+                    <td class="table-light">
+                        Chemistry
+                    </td>
+                    <td class="table-light">
+                        Mechanics of solids
+                    </td>
+                    <td class="table-light">
+                        Reinforced Concrete structures-I
+                    </td>
+                    <td class="table-light">
+                        Steel structures-I
+                    </td>
+                    <td class="table-light">
+                        Reinforced concrete structures-II
+                    </td>
+                    <td class="table-light">
+                        Transportation Engineering – I
+                    </td>
+                    <td class="table-light">
+                        Water resources Engineering – II
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-light">
+                        Mathematics-II
+                    </td>
+                    <td class="table-light">
+                        Computer Programming & Numerical Methods
+                    </td>
+                    <td class="table-light">
+                        Building Materials and Building construction
+                    </td>
+                    <td class="table-light">
+                        Survey-II
+                    </td>
+                    <td class="table-light">
+                        Fluid mechanics-II
+                    </td>
+                    <td class="table-light">
+                        Steel Structures – II
+                    </td>
+                    <td class="table-light">
+                        Project Planning and management
+                    </td>
+                    <td class="table-light">
+                        Elective –III Solid waste management
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-light">
+                        Physics
+                    </td>
+                    <td class="table-light">
+                        History of science & Technology
+                    </td>
+                    <td class="table-light">
+                        Surveying-I
+                    </td>
+                    <td class="table-light">
+                        Building Planning & Drawing
+                    </td>
+                    <td class="table-light">
+                        Geo Technical Engineering – I
+                    </td>
+                    <td class="table-light">
+                        Geotechnical Engineering – II
+                    </td>
+                    <td class="table-light">
+                        Environmental Engineering – II
+                    </td>
+                    <td class="table-light">
+                        Elective – IV Air pollution control
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-light">
+                        Engineering Graphics
+                    </td>
+                    <td class="table-light">
+                        Engineering Mechanics and Strength of Materials
+                    </td>
+                    <td class="table-light">
+                        Fluid mechanics-I
+                    </td>
+                    <td class="table-light">
+                        Fluid mechanics-II
+                    </td>
+                    <td class="table-light">
+                        Environmental Engineering – I
+                    </td>
+                    <td class="table-light">
+                        Fluid mechanics - III
+                    </td>
+                    <td class="table-light">
+                        Environmental Impact Assessment
+                    </td>
+                    <td class="table-light">
+                        Project Work
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-light">
+                        Professional Ethics & Moral Values
+                    </td>
+                    <td class="table-light">
+                        Chemistry Lab
+                    </td>
+                    <td class="table-light">
+                        Environmental science
+                    </td>
+                    <td class="table-light">
+                        Environmental Engineering -I
+                    </td>
+                    <td class="table-light">
+                        Estimation Qunatity & Survey
+                    </td>
+                    <td class="table-light">
+                        Elective – I (Remote sensing & Geo information system
+                    </td>
+                    <td class="table-light">
+                        Computer applications in CIVIL Engineering
+                    </td>
+                    <td class="table-light"></td>
+                </tr>
+                <tr>
+                    <td class="table-light">
+                        Physics Lab
+                    </td>
+                    <td class="table-light">
+                        Computer Programming & Numerical Methods Lab
+                    </td>
+                    <td class="table-light">
+                        Engineering Mechanics
+                    </td>
+                    <td class="table-light">
+                        Fluid mechanics –I lab
+                    </td>
+                    <td class="table-light">
+                        Environmentla Engineering Lab
+                    </td>
+                    <td class="table-light">
+                        Geo technical Engineering __ lab
+                    </td>
+                    <td class="table-light">
+                        Transportation Engineering Lab
+                    </td>
+                    <td class="table-light"></td>
+                </tr>
+                <tr>
+                    <td class="table-light">
+                        Workshop
+                    </td>
+                    <td class="table-light">
+                        English Languages Lab
+                    </td>
+                    <td class="table-light">
+                        Strength of materials lab
+                    </td>
+                    <td class="table-light">
+                        Total station and Gio matics lab
+                    </td>
+                    <td class="table-light">
+                        Geotechnical Engineering Lab
+                    </td>
+                    <td class="table-light">
+                        Concreet Lab
+                    </td>
+                    <td class="table-light">
+                        Fluid mechanics II Lab
+                    </td>
+                    <td class="table-light"></td>
+                </tr>
+                <tr>
+                    <td class="table-light">
+                        ENCC/NSS/Sports(Audit)
+                    </td>
+                    <td class="table-light">
+                        NCC/NSS/Sports(Audit)
+                    </td>
+                    <td class="table-light">
+                        Surveying Field work-I
+                    </td>
+                    <td class="table-light">
+                    </td>
+                    <td class="table-light">
+                        Free elective
+                    </td>
+                    <td class="table-light">
+                        Industrial training
+                    </td>
+                    <td class="table-light">
+                        Industrial training
+                    </td>
+                    <td class="table-light"></td>
+                </tr>
+            </table>
+            <p class="p-2">
+                Curricular and Co – Curricular acticities, Events organized in the department: NIl
+            </p>
+            <p class="p-2">
+                Student and Faculties achievements during last academic year
+            </p>
+            <h6 class="p-1">
+                Faculty Achievements:
+            </h6>
+            <h6 class="p-1">
+                Student Achievements:
+            </h6>
+            <p class="">
+                B. Rama Devi, B. Tejaswini, J. Asha Jyothi, K. Geeta Reddy, A.S.P. Yaswasri, B. Visala, K. Nadiya, M. Santosh Pavani participated in the event PRATISTHA-2K14 conducted by JNTUK (VZM) for material testing
+            </p>
+            <p class="">
+                B. Rama Devi, J. Asha Jyothi, K. Geeta Reddy, A.S.P. Yaswasri, N. Meghana, M. Sindhu Priya, K. Parnitha Reddy participated in the event Constructin of Bridge conducted by IBCC India in Vignan College organized by ARK Technosolutions, IIT Madras.
+            </p>
+            <p class="">
+                M. Padma Priya, G. Gayatri, G. Divya, J. Asha Jyothi, B. Rama Devi, T. Anu Radha, K. Geetha Reddy, B. Tejaswini qualified in PGCET Exam.
+            </p>
+            <h6 class="p-1">
+                6. Name of the laboratories:
+            </h6>
+            <ol class="p-4">
+                <li>
+                    Work Shop
+                </li>
+                <li>
+                    Drawing hall
+                </li>
+                <li>
+                    Strength of materials Laboratory
+                </li>
+                <li>
+                    Surveying Field Work  - I & II
+                </li>
+                <li>
+                    Thermal Prime Mover Laboratory (For EEE)
+                </li>
+                <li>
+                    Fluid mechanics Laboratory – I & II
+                </li>
+                <li>
+                    Geotechnical Engineering Laboratory
+                </li>
+                <li>
+                    Concrete Technology laboratory
+                </li>
+                <li>
+                    Environmental Engineering Laboratory
+                </li>
+                <li>
+                    Transportation Laboratory
+                </li>
+                <li>
+                    Computer applications in CIVIL Engineering Laboratory
+                </li>
+            </ol>
+        </div>
+    </div>
+    <!-- ending of body -->
+
+
+    <!--  footer-->
+    <section class="">
+        <!-- Footer -->
+        <footer class="text-center text-white" style="background-color: rgb(44, 11, 119);">
+            <!-- Grid container -->
+            <div class="container p-4 pb-0">
+
+                <!-- Section: Social media -->
+                <section class="mb-4">
+                    <!-- Facebook -->
+                    <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998;" href="#!"
+                        role="button"><i class="bi bi-facebook"></i></a>
+
+                    <!-- Twitter -->
+                    <a href="https://twitter.com/el_alturas" class="btn btn-social-icon btn-twitter"
+                        style="background-color: #55acee;" href="#!" role="button"><i class="bi bi-twitter"></i></a>
+
+                    <!-- Google -->
+                    <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39;" href="#!"
+                        role="button"><i class="bi bi-google"></i></a>
+
+                    <!-- Instagram -->
+                    <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac;" href="#!"
+                        role="button"><i class="bi bi-instagram"></i></a>
+
+                    <!-- Linkedin -->
+                    <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca;" href="#!"
+                        role="button"><i class="bi bi-linkedin"></i></a>
+                    <!-- Github -->
+                    <a class="btn btn-primary btn-floating m-1" style="background-color: #333333;" href="#!"
+                        role="button"><i class="bi bi-github"></i></a>
+                </section>
+                <!-- Section: Social media -->
+
+                <!-- Section: CTA -->
+                <section class="">
+                    <p class="d-flex justify-content-center align-items-center">
+                        <marquee width="80%" direction="left" class="me-3">
+                            First List of Category B Admissions for AY2020-21.
+                        </marquee>
+                    </p>
+                </section>
+                <!-- Section: CTA -->
+            </div>
+            <!-- Grid container -->
+
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                DLBCE
+                <a class="text-white" href="https://mdbootstrap.com/"></a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+    </section>
+    <!-- ending of footer -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+    <!-- <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script> -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

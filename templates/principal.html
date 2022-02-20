@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+{% load static %}
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="./assets/css/node_modules/bootstrap/dist/css/bootstrap.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <!-- <link rel="stylesheet" href="./assets/css/bootstrap.css"> -->
+
+    <link href="{% static 'mycss.css'%}" rel="stylesheet">
+
+</head>
+
+
+<body>
+    <!-- header  -->
+    <div style="background-color:rgb(255, 255, 255)">
+        <div class="container-fluid text-uppercase  ">
+
+            <div class="text-left p-3" style="background-color: rgb(255, 255, 255);color: #2f1166;">
+                <div class="row">
+                    <div class="col-md-2 px-2 d-flex justify-content-center"><img src="{% static 'img/logo.jpeg'%}"
+                            alt="" class="img rounded-circle " width="110rem">
+                    </div>
+
+                    <div class="col-md-7 px-2 align-left " style="font-family:  Roboto;">
+                        <h4> Dr.LANKaPALLI BULLAYyA COLLEGE of
+                            engineering<br>
+                        </h4>
+                        <div class="clss"
+                            style="color: rgb(56, 187, 126);font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: bold;">
+                            <h6>Sponsered by socity of collegiate Education<br>Approved by AICTE affiliated to Andhra
+                                Univercity</h6>
+                            <hr>
+
+                        </div>
+                    </div>
+                    <div class="col-md-2 float-end py-4" style="font-style: italic; font-weight: bold;">
+                        <h6> EAPCET CODE/ECET </h6>
+                        <div class="clss" style="color: rgb(56, 187, 126);">
+                            <h4>DLBC</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-1 float-end py-4 d-none d-md-block blink_me"
+                        style="font-style: italic; font-weight: bold;">
+                        <h6> years of excellency </h6>
+                        <div class="clss" style="color: rgb(56, 187, 126);">
+                            <h4>12</h4>
+                        </div>
+                    </div>
+
+                </div>
+                <a class="text-white" href="https://mdbootstrap.com/"></a>
+            </div>
+        </div>
+    </div>
+    <!-- end of header  -->
+
+    <!-- navbar -->
+    <nav id="navbar_top" class="shadow-sm pb-3 navbar sticky-top navbar-expand-md navbar-light bg-light ">
+        <div class="container">
+            <button class="navbar-toggler float-end" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 flex-fill flex-wrap justify-content-center">
+                    <li class="nav-item ">
+                        <a class="nav-link active " aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link active " aria-current="page" href="/secretary">Secretary's Message</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/profile">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/principal" tabindex="-1" aria-disabled="true">Principal</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                            aria-expanded="false">Departments
+
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="/cse/home">CSE</a></li>
+                            <li><a class="dropdown-item" href="/civil/home">CIVIL</a></li>
+
+                            <li><a class="dropdown-item" href="">ECE</a></li>
+                            <li><a class="dropdown-item" href="">EEE</a></li>
+
+                            <li><a class="dropdown-item" href="">BASIC SCIENCES</a></li>
+                        </ul>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link active" href="#" tabindex="-1" aria-disabled="true">AICTE</a>
+                    </li> -->
+                    <li class="nav-item dropdown">
+                        <a class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                            aria-expanded="false">AICTCE
+
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="">Mandatory Discloser</a></li>
+                            <li><a class="dropdown-item" href="">Feedback</a></li>
+                            <li><a class="dropdown-item" href="">Anti- Ragging Committe</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/contact" tabindex="-1" aria-disabled="true">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Feedback</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="" tabindex="-1" aria-disabled="true">NIRF-2021</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" target="blank"
+                            href="https://formbuilder.ccavenue.com/live/the-society-for-collegiate-education">Online
+                            Payment</a>
+                    </li>
+
+                </ul>
+
+
+            </div>
+        </div>
+    </nav>
+    <!-- ending of navbar -->
+    <!-- starting of body -->
+    <div class="container ">
+        <div class="row">
+            <div class="col-md-5 p-4 d-flex justify-content-center">
+                <div class="card " style="width: 18rem; height: fit-content;">
+                    <img src="{% static 'img/principal.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text text-center">
+                            Prof. D. Deepak Chowdary<br>
+                            B.E, M.Tech MIE, MISTE. Ph.D<br>
+                            Principal I/C - Engineering College<br>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7 p-4 justify-content-center">
+                <div class="row">
+                    <figure class="text-center">
+                        <blockquote class="blockquote" style="font-family:  Roboto;">
+                            <h2> Principal's Message</h2>
+
+                        </blockquote>
+
+                    </figure>
+                </div>
+                <div class="row">
+                    <p class="p-2">
+                        Dr. Lankapalli Bullayya College has a long proud history of glorious academic service and it has
+                        been a leader and innovator in professional education. A chain of Junior College, Degree
+                        College, P.G. College and Engineering College in our campus provide higher education at all
+                        levels. It has played an important role in the all-round development of the youth and in
+                        grooming competent leaders.
+                    </p>
+                    <p class="p-2">
+                        Dr, L. Bullayya College of Engineering seeks to provide students with skills and strengths
+                        through intellectual and technical competence. The proficient professors ignite their
+                        imagination. Staff and administration assist them in their knowledge pursuits. Our campus
+                        ambience and its beautiful surroundings stimulate their minds, broaden their intellectual
+                        horizons and inspire their hearts.
+                    </p>
+                    <p class="p-2">
+                        The Academic Programs offered by different departments of our college are of good standards. The
+                        faculty and staff of our college feel honored to partner with the prospective students in their
+                        educational journey. The governing body, management, faculty, staff, students and alumnae of Dr.
+                        L Bullayya College of Engineering, encourage you to learn more about us by visiting our campus.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-5 p-4 d-flex justify-content-center">
+                <div class="card" style="width: 18rem; height: fit-content;">
+                    <img src="{% static 'img/vicep.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text text-center">
+                            Syed Mujib Rahaman<br>
+                            M.Tech (IT), MCA,MBA (HR) M.Phil (CS), (Ph.D).(CSE))
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7 ">
+                <div class="row">
+                    <figure class="text-center">
+                        <blockquote class="blockquote" style="font-family:  Roboto;">
+                            <h2> Vice Principal's Message</h2>
+
+                        </blockquote>
+
+                    </figure>
+                </div>
+                <div class="row">
+                    <p class="p-2">
+                        Dr. Lankapalli Bullayya College of Engineering, situated amidst lush green flora, endeavors to
+                        foster the engineering students and imparts to them both Technical and Personality Skills. The
+                        scholarly professors of our college constantly monitor student’s progress and they also mould
+                        them as self-reliant and competent persons with which they can face the challenges in global job
+                        markets. The management is generous enough to provide all facilities and amenities for achieving
+                        academic excellence in technical education.
+
+                    </p>
+                    <p class="p-2">
+                        The College has been a forerunner in recognizing the needs of the rapidly changing technological
+                        world and it has been playing a significant role in bridging the hiatus between Academia and
+                        Industry. The college curriculum focuses on the physical health, intellectual wealth and the
+                        spiritual strength of the young students. The engineering students of our college will emerge as
+                        creative technocrats and they can play an important role in social transformation, economic
+                        progress and nation building. On behalf of the management, I invite the aspirants of engineering
+                        education to meet us for fulfilling their academic goals.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ending of body -->
+
+
+    <!--  footer-->
+    <section class="">
+        <!-- Footer -->
+        <footer class="text-center text-white" style="background-color: rgb(44, 11, 119);">
+            <!-- Grid container -->
+            <div class="container p-4 pb-0">
+
+                <!-- Section: Social media -->
+                <section class="mb-4">
+                    <!-- Facebook -->
+                    <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998;" href="#!"
+                        role="button"><i class="bi bi-facebook"></i></a>
+
+                    <!-- Twitter -->
+                    <a href="https://twitter.com/el_alturas" class="btn btn-social-icon btn-twitter"
+                        style="background-color: #55acee;" href="#!" role="button"><i class="bi bi-twitter"></i></a>
+
+                    <!-- Google -->
+                    <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39;" href="#!"
+                        role="button"><i class="bi bi-google"></i></a>
+
+                    <!-- Instagram -->
+                    <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac;" href="#!"
+                        role="button"><i class="bi bi-instagram"></i></a>
+
+                    <!-- Linkedin -->
+                    <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca;" href="#!"
+                        role="button"><i class="bi bi-linkedin"></i></a>
+                    <!-- Github -->
+                    <a class="btn btn-primary btn-floating m-1" style="background-color: #333333;" href="#!"
+                        role="button"><i class="bi bi-github"></i></a>
+                </section>
+                <!-- Section: Social media -->
+
+                <!-- Section: CTA -->
+                <section class="">
+                    <!-- <p class="d-flex justify-content-center align-items-center">
+                        <span class="me-3">Register for free</span>
+                        <button type="button" class="btn btn-outline-light btn-rounded">
+                            Sign up!
+                        </button>
+                    </p> -->
+                    <p class="d-flex justify-content-center align-items-center">
+                        <marquee width="80%" direction="left" class="me-3">
+                            First List of Category B Admissions for AY2020-21.
+                        </marquee>
+                    </p>
+                </section>
+                <!-- Section: CTA -->
+            </div>
+            <!-- Grid container -->
+
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                DLBCE
+                <a class="text-white" href="https://mdbootstrap.com/"></a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+    </section>
+    <!-- ending of footer -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+    <!-- <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script> -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

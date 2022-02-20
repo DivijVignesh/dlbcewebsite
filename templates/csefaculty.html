@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="./assets/css/node_modules/bootstrap/dist/css/bootstrap.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <!-- <link rel="stylesheet" href="./assets/css/bootstrap.css"> -->
+
+    <link href="{% static 'mycss.css' %}" rel="stylesheet">
+
+</head>
+
+
+<body>
+    <!-- header  -->
+   <div style="background-color:rgb(255, 255, 255)">
+        <div class="container-fluid text-uppercase  ">
+
+            <div class="text-left p-3" style="background-color: rgb(255, 255, 255);color: #2f1166;">
+                <div class="row">
+                    <div class="col-md-2 px-2 d-flex justify-content-center"><img src="{% static 'img/logo.jpeg'%}" alt="" class="img rounded-circle " width="110rem">
+                    </div>
+
+                    <div class="col-md-7 px-2 align-left " style="font-family:  Roboto;">
+                        <h4> Dr.LANKaPALLI BULLAYyA COLLEGE of
+                            engineering<br>
+                        </h4>
+                        <div class="clss"
+                            style="color: rgb(56, 187, 126);font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: bold;">
+                            <h6>Sponsered by socity of collegiate Education<br>Approved by AICTE affiliated to Andhra
+                                Univercity</h6>
+                            <hr>
+
+                        </div>
+                    </div>
+                    <div class="col-md-2 float-end py-4"
+                        style="font-style: italic; font-weight: bold;">
+                        <h6> EAPCET CODE/ECET </h6>
+                        <div class="clss" style="color: rgb(56, 187, 126);">
+                            <h4>DLBC</h4>
+                        </div>
+                    </div>
+                <div class="col-md-1 float-end py-4 d-none d-md-block blink_me"
+                        style="font-style: italic; font-weight: bold;">
+                        <h6> years of excellency </h6>
+                        <div class="clss" style="color: rgb(56, 187, 126);">
+                            <h4>12</h4>
+                        </div>
+                    </div>
+
+                </div>
+                <a class="text-white" href="https://mdbootstrap.com/"></a>
+            </div>
+        </div>
+    </div> 
+    <!-- end of header  -->
+
+    <!-- navbar -->
+    <nav id="navbar_top" class="shadow-sm pb-3 navbar sticky-top navbar-expand-md navbar-light bg-light ">
+        <div class="container">
+            <button class="navbar-toggler float-end" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 flex-fill flex-wrap justify-content-center">
+                   <li class="nav-item ">
+                        <a class="nav-link active " aria-current="page" href="{% url 'csehome'%}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="profile">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="hod" tabindex="-1" aria-disabled="true">HOD</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="faculty" tabindex="-1" aria-disabled="true">Faculty</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="activities" tabindex="-1" aria-disabled="true">Activities</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                            aria-expanded="false">Departments
+
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="{% url 'csehome'%}">CSE</a></li>
+                            <li><a class="dropdown-item" href="{% url 'civilhome'%}">CIVIL</a></li>
+
+                            <li><a class="dropdown-item" href="{% url 'ecehome'%}">ECE</a></li>
+                            <li><a class="dropdown-item" href="{% url 'eeehome'%}">EEE</a></li>
+
+                            <li><a class="dropdown-item" href="{% url 'bshome'%}">BASIC SCIENCES</a></li>
+                        </ul>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link active" href="#" tabindex="-1" aria-disabled="true">AICTE</a>
+                    </li> -->
+                    <li class="nav-item dropdown">
+                        <a class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                            aria-expanded="false">AICTCE
+
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="">Mandatory Discloser</a></li>
+                            <li><a class="dropdown-item" href="">Feedback</a></li>
+                            <li><a class="dropdown-item" href="">Anti- Ragging Committe</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{% url 'home'%}">Main Home</a>
+                    </li> 
+
+                </ul>
+
+
+            </div>
+        </div>
+    </nav>
+    <!-- ending of navbar -->
+    <!-- starting of body -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="p-3">
+                    FACULTY
+                </h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <a href="/cse/faculty/smrahaman"><img src="{% static 'img/faculty/fact5.jpg'%}" class="img-fluid rounded-start" height="200px" width="200px" alt="..."></a>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">SYED MUJIB RAHAMAN</h5>
+                                <small class="card-text">ASSOCIATE PROFESSOR<br>
+                                    M.Tech(IT), MCA,MBA(HR) M.Phil(CS), (Ph.D.(CSE))<br>
+
+                                    viceprincipal@lbce.edu.in/smrahaman@lbce.edu.in<br>
+                                    9848223165</small>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <a href="/cse/faculty/dkkreddy"><img src="{% static '/img/faculty/fact6.jpg'%}" class="img-fluid rounded-start" height="200px" width="200px" alt="..."></a>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">D Karun Kumar Reddy</h5>
+                                <small class="card-text">
+                                    ASSISTANT PROFESSOR<br>
+                                    B.TECH, M.TECH, APSET Qualified<br>
+
+                                    dkkreddy@lbce.edu.in<br>
+                                    9966064964
+                                </small>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <a href="/cse/faculty/mdfarhatullah"><img src="{% static 'img/faculty/fact9.jpg'%}" class="img-fluid rounded-start" height="200px" width="200px" alt="..."></a>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Md.Farhatullah</h5>
+                                <small class="card-text">
+
+                                    
+                                    ASSISTANT PROFESSOR<br>
+                                    B.TECH,M.TECH,APSET,UGC-NET,MACM<br>
+
+                                    mdfarhatullah@lbce.edu.in<br>
+                                    9908256231
+                                </small>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <a href="/cse/faculty/svenkatswamy"><img src="{% static 'img/faculty/fact8.jpg'%}" class="img-fluid rounded-start" height="200px" width="200px" alt="..."></a>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">S.Venkat Swamy</h5>
+                                <small class="card-text ">
+
+                                    ASSISTANT PROFESSOR<br>
+                                    B.TECH, M.TECH,(Ph.D)<br>
+                                    svswamy@lbce.edu.in<br>
+                                    Cell No:9440582990
+                                </small>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <a href="/cse/faculty/lavanyaratna"><img src="{% static 'img/faculty/fact10.jpg'%}" class="img-fluid rounded-start" height="200px" width="200px" alt="..."></a>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Ms. Ch LAVANYA RATNA VENKATA</h5>
+                                <small class="card-text">
+
+                                    Assistant Professor<br>
+                                    M.TECH,B.TECH<br>
+                                    chlavanya@lbce.edu.in<br>
+                                    8885597776
+                                </small>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <a href="/cse/faculty/kanuradha"><img src="{% static 'img/faculty/fact11.jpg'%}"  class="img-fluid rounded-start" height="200px" width="200px" alt="..."></a>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Dr.K ANURADHA</h5>
+                                <small class="card-text">
+
+                                    Assistant Professor<br>
+                                    M.Sc,M.Tech,Ph.D,(AMIE-CSE)<br>
+                                    kanuradha@lbce.edu.in<br>
+                                    9908566636
+                                </small>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <a href="/cse/faculty/gvamsikrishna"><img src="{% static 'img/faculty/fact2.jpg' %}" class="img-fluid rounded-start" height="200px" width="200px" alt="..."></a>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title"> Dr. G.Vamsi Krishna</h5>
+                                <small class="card-text">
+
+                                    Assistant Professor<br>
+                                    B.TECH, M.TECH, Ph.D<br>
+                                    gvamsik@lbce.edu.in<br>
+                                    9491195444
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <a href="/cse/faculty/srikanthd"><img src="{% static 'img/faculty/DSC_5653-1.jpg'%}" class="img-fluid rounded-start" height="200px" width="200px" alt="..."></a>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Mr.SRIKANTH DASARI</h5>
+                                <small class="card-text ">
+
+                                    Assistant Professor<br>
+                                    DCME, B.TECH(CSE), M.TECH(CST), Ph.D,<br>
+                                    KSET(2018),TS-SET(2019),AP-SET(2019),<br>
+                                    AP-SET(2020),APRCET(2019)<br>
+
+                                    dsrikanth@lbce.edu.in<br>
+                                    9505302498
+                                </small>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <a href="/cse/faculty/trenuka"><img src="{% static 'img/faculty/fact13.jpg' %}" class="img-fluid rounded-start" height="200px" width="200px" alt="..."></a>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Ms. T RENUKA</h5>
+                                <small class="card-text">
+
+
+                                    Assistant Professor<br>
+                                    B.Tech.(CSE), M Tech<br>
+                                    prenuka@lbce.edu.in<br>
+                                    8331845976
+
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <a href="/cse/faculty/prajyalakshmi"><img src="{% static 'img/faculty/fact15.jpg'%}" class="img-fluid rounded-start" height="200px" width="200px" alt="..."></a>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Ms. P RAJYA LAXMI</h5>
+                                <small class="card-text ">
+
+                                    Assistant Professor<br>
+                                    B.TECH, M.TECH, AP-SET<br>
+                                    prajyalakshmi@lbce.edu.in<br>
+                                    9963755230
+                                </small>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <a href="/cse/faculty/kvijay"><img src="{% static 'img/faculty/fact1.jpg' %}" class="img-fluid rounded-start" height="200px" width="200px" alt="..."></a>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">KALLA VIJAY</h5>
+                                <small class="card-text">
+
+                                    Assistant Professor<br>
+                                    B.TECH, M.TECH, AP-SET<br>
+                                    kvijay@lbce.edu.in<br>
+                                    8074883436
+
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <a href="/cse/faculty/gkavya"><img src="{% static 'img/faculty/fact3.jpg'%}" class="img-fluid rounded-start" height="200px" width="200px" alt="..."></a>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Ms.GUDIMETLA KAVYA</h5>
+                                <small class="card-text ">
+
+                                    Assistant Professor<br>
+                                    B.TECH,M.TECH<br>
+                                    gkavya@lbce.edu.in<br>
+                                    8125203456
+                                </small>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <a href="/cse/faculty/taruna"><img src="{% static 'img/faculty/Aruna.jpg'%}" class="img-fluid rounded-start" height="200px" width="200px" alt="..."></a>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Ms.ARUNA THETHALI</h5>
+                                <small class="card-text">
+
+
+                                    Assistant Professor<br>
+                                    B.TECH(CSE),M.TECH(CSE), APSET<br>
+                                    taruna@lbce.edu.in<br>
+                                    9700016606
+
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <a href="/cse/faculty/bsantoskumar"><img src="{% static 'img/faculty/Santhosh.jpg'%}" class="img-fluid rounded-start" height="200px" width="200px" alt="..."></a>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Mr.B.SANTOSH KUMAR</h5>
+                                <small class="card-text ">
+
+                                    Assistant Professor<br>
+                                    B.TECH(CSE),M.TECH(CST)<br>
+                                    bsantos@lbce.edu.in<br>
+                                    9010888807<br>
+                                </small>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <a href="/cse/faculty/drajakishore"><img src="{% static 'img/faculty/RAJA.jpg' %}" class="img-fluid rounded-start" height="200px" width="200px" alt="..."></a>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Dr.D.RAJA KISHOR</h5>
+                                <small class="card-text">
+
+                                    Assistant Professor<br>
+                                    M.TECH(CST),Ph.D<br>
+                                    drajakishore@lbce.edu.in<br>
+                                    8008264690
+
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <a href="/cse/faculty/vjayavani"><img src="{% static 'img/faculty/DSC_0177.jpg'%}" class="img-fluid rounded-start" height="200px" width="200px" alt="..."></a>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Ms.V JAYAVANI</h5>
+                                <small class="card-text ">
+                                    
+                                    Assistant Professor<br>
+                                    B.TECH(CSE),M.TECH(CST),Ph.D,SET<br>
+                                    vjayavani@lbce.edu.in<br>
+                                    9704485543
+                                </small>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <a href="/cse/faculty/sowjanyanaidu"><img src="{% static 'img/faculty/sowjanya.jpg' %}" class="img-fluid rounded-start" height="200px" width="200px" alt="..."></a>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Ms.SOWJANYA NAIDU K</h5>
+                                <small class="card-text ">
+
+                                    Assistant Professor<br>
+                                    B.TECH,M.TECH, GATE<br>
+                                    ksowjanya@lbce.edu.in<br>
+                                    7780622583
+                                    </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ending of body -->
+
+
+    <!--  footer-->
+    <section class="">
+        <!-- Footer -->
+        <footer class="text-center text-white" style="background-color: rgb(44, 11, 119);">
+            <!-- Grid container -->
+            <div class="container p-4 pb-0">
+
+                <!-- Section: Social media -->
+                <section class="mb-4">
+                    <!-- Facebook -->
+                    <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998;" href="#!"
+                        role="button"><i class="bi bi-facebook"></i></a>
+
+                    <!-- Twitter -->
+                    <a href="https://twitter.com/el_alturas" class="btn btn-social-icon btn-twitter"
+                        style="background-color: #55acee;" href="#!" role="button"><i class="bi bi-twitter"></i></a>
+
+                    <!-- Google -->
+                    <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39;" href="#!"
+                        role="button"><i class="bi bi-google"></i></a>
+
+                    <!-- Instagram -->
+                    <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac;" href="#!"
+                        role="button"><i class="bi bi-instagram"></i></a>
+
+                    <!-- Linkedin -->
+                    <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca;" href="#!"
+                        role="button"><i class="bi bi-linkedin"></i></a>
+                    <!-- Github -->
+                    <a class="btn btn-primary btn-floating m-1" style="background-color: #333333;" href="#!"
+                        role="button"><i class="bi bi-github"></i></a>
+                </section>
+                <!-- Section: Social media -->
+
+                <!-- Section: CTA -->
+                <section class="">
+                    <p class="d-flex justify-content-center align-items-center">
+                        <marquee width="80%" direction="left" class="me-3">
+                            First List of Category B Admissions for AY2020-21.
+                        </marquee>
+                    </p>
+                </section>
+                <!-- Section: CTA -->
+            </div>
+            <!-- Grid container -->
+
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                DLBCE
+
+            </div>
+            <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+    </section>
+    <!-- ending of footer -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+    <!-- <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script> -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

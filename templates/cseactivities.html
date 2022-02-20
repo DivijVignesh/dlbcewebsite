@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="./assets/css/node_modules/bootstrap/dist/css/bootstrap.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <!-- <link rel="stylesheet" href="./assets/css/bootstrap.css"> -->
+
+    <link href="{% static 'mycss.css'%}" rel="stylesheet">
+
+</head>
+
+
+<body>
+    <!-- header  -->
+<div style="background-color:rgb(255, 255, 255)">
+        <div class="container-fluid text-uppercase  ">
+
+            <div class="text-left p-3" style="background-color: rgb(255, 255, 255);color: #2f1166;">
+                <div class="row">
+                    <div class="col-md-2 px-2 d-flex justify-content-center"><img src="{% static 'img/logo.jpeg'%}" alt="" class="img rounded-circle " width="110rem">
+                    </div>
+
+                    <div class="col-md-7 px-2 align-left " style="font-family:  Roboto;">
+                        <h4> Dr.LANKaPALLI BULLAYyA COLLEGE of
+                            engineering<br>
+                        </h4>
+                        <div class="clss"
+                            style="color: rgb(56, 187, 126);font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: bold;">
+                            <h6>Sponsered by socity of collegiate Education<br>Approved by AICTE affiliated to Andhra
+                                Univercity</h6>
+                            <hr>
+
+                        </div>
+                    </div>
+                    <div class="col-md-2 float-end py-4"
+                        style="font-style: italic; font-weight: bold;">
+                        <h6> EAPCET CODE/ECET </h6>
+                        <div class="clss" style="color: rgb(56, 187, 126);">
+                            <h4>DLBC</h4>
+                        </div>
+                    </div>
+                <div class="col-md-1 float-end py-4 d-none d-md-block blink_me "
+                        style="font-style: italic; font-weight: bold;">
+                        <h6> years of excellency </h6>
+                        <div class="clss" style="color: rgb(56, 187, 126);">
+                            <h4>12</h4>
+                        </div>
+                    </div>
+
+                </div>
+                <a class="text-white" href="https://mdbootstrap.com/"></a>
+            </div>
+        </div>
+    </div>
+    <!-- end of header  -->
+
+    <!-- navbar -->
+    <nav id="navbar_top" class="shadow-sm pb-3 navbar sticky-top navbar-expand-md navbar-light bg-light ">
+        <div class="container">
+            <button class="navbar-toggler float-end" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 flex-fill flex-wrap justify-content-center">
+                   <li class="nav-item ">
+                        <a class="nav-link active " aria-current="page" href="{% url 'csehome'%}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="profile">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="hod" tabindex="-1" aria-disabled="true">HOD</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="faculty" tabindex="-1" aria-disabled="true">Faculty</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="activities" tabindex="-1" aria-disabled="true">Activities</a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                            aria-expanded="false">Departments
+
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="{% url 'csehome'%}">CSE</a></li>
+                            <li><a class="dropdown-item" href="{% url 'civilhome'%}">CIVIL</a></li>
+
+                            <li><a class="dropdown-item" href="{% url 'ecehome'%}">ECE</a></li>
+                            <li><a class="dropdown-item" href="{% url 'eeehome'%}">EEE</a></li>
+
+                            <li><a class="dropdown-item" href="{% url 'bshome'%}">BASIC SCIENCES</a></li>
+                        </ul>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link active" href="#" tabindex="-1" aria-disabled="true">AICTE</a>
+                    </li> -->
+                    <li class="dropdown">
+                        <a class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                            aria-expanded="false">AICTCE
+
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="">Mandatory Discloser</a></li>
+                            <li><a class="dropdown-item" href="">Feedback</a></li>
+                            <li><a class="dropdown-item" href="">Anti- Ragging Committe</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{% url 'home'%}">Main Home</a>
+                    </li> 
+
+                </ul>
+
+
+            </div>
+        </div>
+    </nav>
+    <!-- ending of navbar -->
+    <!-- starting of body -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="p-4">
+                    ACTIVITIES
+                </h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h3 class="p-2">
+                    CSE Student toppers 2017
+                </h3>
+                <ul class="px-5">
+                    <li>
+                        IV/IV B.Tech CSE- A – .B.Vaishnav CGPA – 8.28
+                    </li>
+                    <li>
+                        IV/IV B.Tech CSE -B – .N.K.M.R.PRASUNA CGPA – 8.03
+                    </li>
+                    <li>
+                        III/IV B.Tech CSE A – .G.Poojitha CGPA – 8.33
+                    </li>
+                    <li>
+                        III/IV B.Tech CSE B – P.Aashitha – V.Mounika- CGPA – 8.26
+                    </li>
+                    <li>
+                        II/IV B.Tech CSE A – G.M.Sai Pratyusha – CGPA – 8.9
+                    </li>
+                    <li>
+                        II/IV B.Tech CSE B – M.Divya – CGPA – 9.16
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h3 class="p-2">
+                    CSE Faculty Achievements
+                </h3>
+                <ul class="px-5">
+                    <li>
+                        Dr .G.VamsiKrishna was awarded doctorate degree in January 2017
+                    </li>
+                    <li>
+                       Mr. D.KarunKumar Reddy qualified in APSET 2016.
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h3 class="p-2">
+                    CURRICULAR AND CO-CURRICULAR ACTIVITIES, EVENTS ORGANIZED IN THE DEPARTMENT
+                </h3>
+                <ul class="px-5">
+                    <li>
+                        A two day Maya – Animation Workshop conducted on 29-11-2016 and 30-11-2016.
+                    </li>
+                    <li>
+                        A two day workshop on Oracle –SQL developer conducted on 03-09-2016 and 04-09-2016.
+                    </li>
+                    <li>
+                        A two weeks workshop on Algorithm Design Techniques conducted from 23-05-2017 to 05-06-2017
+                    </li>
+                    <li>
+                        A Five day workshop on Mobile Application Development through Android with mini project for from
+                        06-06-2017 to 10-06-2017.
+                    </li>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h3 class="p-2">
+                    Computer Society of India – Student Chapter Activities
+                </h3>
+                <ul class="px-5">
+                    <li>
+                        C- Technical Quiz conducted on 17/12/2016
+                    </li>
+                    <li>
+                        C- Technical Quiz conducted on 17/12/2016
+                    </li>
+                    <li>
+                        Computer fundamentals – Quiz conducted on 13/02/2017
+                    </li>
+                    <li>
+                        Quiz conducted on 20/02/2017
+                    </li>
+                    <li>
+                        Big Fight conducted on 27/02/2017
+                    </li>
+                    <li>
+                        Java Technical Contest conducted on 23/07/2017
+                    </li>
+                    <li>
+                        Current Affairs Contest conducted on 17/09/2017
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h3 class="p-2">
+                    STUDENTS CULTURAL AND CO-CULTURAL ACTIVITY
+                </h3>
+                <table class="table table-primary">
+                    <tr class="table-primary">
+                        <td class="table-primary">
+                            Sno.
+                        </td>
+                        <td class="table-primary">
+                            Number of the Student
+                        </td>
+                        <td class="table-primary">
+                            Date of participation
+                        </td>
+                        <td class="table-primary">
+                            Event Participated
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-light">
+                            1
+                        </td>
+                        <td class="table-light">
+                            Arasada Vandhana
+                        </td>
+                        <td class="table-light">
+                            26th May -5th june 2017
+                        </td>
+                        <td class="table-light">
+                            Algorithm And Design Techniques
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-light">
+                            2
+                        </td>
+                        <td class="table-light">
+                            Asuri Deepthi
+                        </td>
+                        <td class="table-light">
+                            22Jan 2017
+                        </td>
+                        <td class="table-light">
+                            1)5K Run-Department of Youth Services<br>
+                            2)NCC Camp -IGC H(A)NMU
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-light">
+                            3
+                        </td>
+                        <td class="table-light">
+                            Basa Pravallika
+                        </td>
+                        <td class="table-light">
+                            20 Feb 2016 & 22Jan 2017
+                        </td>
+                        <td class="table-light">
+                            1)Quiz-College<br>
+                            2)5k Run-Department of youth Services
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-light">
+                            4
+                        </td>
+                        <td class="table-light">
+                            Bhanu Sree Ratho
+                        </td>
+                        <td class="table-light">
+                            26th May -5th june 2017<br>,20 Feb 2016
+                        </td>
+                        <td class="table-light">
+                            1)Algorithm And Design Techniques<br>2)Quiz-College
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-light">
+                            5
+                        </td>
+                        <td class="table-light">
+                            Chenna Nirupama
+                        </td>
+                        <td class="table-light">
+                            26th May -5th june 2017<br>
+                            23rd-26th Feb 2016<br>
+                            07 Jan 2017
+                        </td>
+                        <td class="table-light">
+                            1)Mobile App Development<br>
+                            2)Algorithm And Design Techniques<br>
+                            3)Power lifting -Nationals<br>
+                            4)Inter College Power Lifting<br>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- ending of body -->
+
+
+    <!--  footer-->
+    <section class="">
+        <!-- Footer -->
+        <footer class="text-center text-white" style="background-color: rgb(44, 11, 119);">
+            <!-- Grid container -->
+            <div class="container p-4 pb-0">
+
+                <!-- Section: Social media -->
+                <section class="mb-4">
+                    <!-- Facebook -->
+                    <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998;" href="#!"
+                        role="button"><i class="bi bi-facebook"></i></a>
+
+                    <!-- Twitter -->
+                    <a href="https://twitter.com/el_alturas" class="btn btn-social-icon btn-twitter"
+                        style="background-color: #55acee;" href="#!" role="button"><i class="bi bi-twitter"></i></a>
+
+                    <!-- Google -->
+                    <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39;" href="#!"
+                        role="button"><i class="bi bi-google"></i></a>
+
+                    <!-- Instagram -->
+                    <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac;" href="#!"
+                        role="button"><i class="bi bi-instagram"></i></a>
+
+                    <!-- Linkedin -->
+                    <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca;" href="#!"
+                        role="button"><i class="bi bi-linkedin"></i></a>
+                    <!-- Github -->
+                    <a class="btn btn-primary btn-floating m-1" style="background-color: #333333;" href="#!"
+                        role="button"><i class="bi bi-github"></i></a>
+                </section>
+                <!-- Section: Social media -->
+
+                <!-- Section: CTA -->
+                <section class="">
+                    <p class="d-flex justify-content-center align-items-center">
+                        <marquee width="80%" direction="left" class="me-3">
+                            First List of Category B Admissions for AY2020-21.
+                        </marquee>
+                    </p>
+                </section>
+                <!-- Section: CTA -->
+            </div>
+            <!-- Grid container -->
+
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                DLBCE
+                <a class="text-white" href="https://mdbootstrap.com/"></a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+    </section>
+    <!-- ending of footer -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+    <!-- <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script> -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
