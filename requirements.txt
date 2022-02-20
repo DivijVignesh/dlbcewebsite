@@ -52,7 +52,7 @@ multipledispatch==0.6.0
 mypy-extensions==0.4.3
 mysql-connector-python==8.0.27
 mysqlclient==2.0.3
-navigator-updater==0.2.1
+
 
 
 olefile==0.46
