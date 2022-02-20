@@ -9,14 +9,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <!-- <link rel="stylesheet" href="./assets/css/bootstrap.css"> -->
 
-    <link href="{% static 'mycss.css'%}" rel="stylesheet">
+    <link href="./mycss.css" rel="stylesheet">
 
 </head>
 
 
 <body>
     <!-- header  -->
-<div style="background-color:rgb(255, 255, 255)">
+    <div style="background-color:rgb(255, 255, 255)">
         <div class="container-fluid text-uppercase  ">
 
             <div class="text-left p-3" style="background-color: rgb(255, 255, 255);color: #2f1166;">
@@ -59,8 +59,7 @@
     <!-- end of header  -->
 
     <!-- navbar -->
-    <nav id="navbar_top"
-        class="shadow-sm pb-3 navbar sticky-top navbar-expand-md navbar-light bg-light ">
+    <nav id="navbar_top" class="shadow-sm pb-3 navbar sticky-top navbar-expand-md navbar-light bg-light ">
         <div class="container">
             <button class="navbar-toggler float-end" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
@@ -70,17 +69,20 @@
 
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 flex-fill flex-wrap justify-content-center">
-                    <li class="nav-item ">
-                        <a class="nav-link active " aria-current="page" href="/">Home</a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link active " aria-current="page" href="/secretary">Secretary's Message</a>
+                   <li class="nav-item ">
+                        <a class="nav-link active " aria-current="page" href="{% url 'bshome'%}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="/profile">Profile</a>
+                        <a class="nav-link active" href="profile">Profile</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="/principal" tabindex="-1" aria-disabled="true">Principal</a>
+                        <a class="nav-link active" href="hod" tabindex="-1" aria-disabled="true">HOD</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="faculty" tabindex="-1" aria-disabled="true">Faculty</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" tabindex="-1" aria-disabled="true">Activities</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
@@ -88,13 +90,13 @@
 
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                            <li><a class="dropdown-item" href="/cse/home">CSE</a></li>
-                            <li><a class="dropdown-item" href="/civil/home">CIVIL</a></li>
+                            <li><a class="dropdown-item" href="{% url 'csehome'%}">CSE</a></li>
+                            <li><a class="dropdown-item" href="{% url 'civilhome'%}">CIVIL</a></li>
 
-                            <li><a class="dropdown-item" href="/ece/home">ECE</a></li>
-                            <li><a class="dropdown-item" href="/eee/home">EEE</a></li>
+                            <li><a class="dropdown-item" href="{% url 'ecehome'%}">ECE</a></li>
+                            <li><a class="dropdown-item" href="{% url 'eeehome'%}">EEE</a></li>
 
-                            <li><a class="dropdown-item" href="/bs/home">BASIC SCIENCES</a></li>
+                            <li><a class="dropdown-item" href="{% url 'bshome'%}">BASIC SCIENCES</a></li>
                         </ul>
                     </li>
                     <!-- <li class="nav-item">
@@ -112,19 +114,9 @@
 
                         </ul>
                     </li>
-
                     <li class="nav-item">
-                        <a class="nav-link active" href="/contact" tabindex="-1" aria-disabled="true">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Feedback</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" target="blank" href="{% static 'Dr. Lankapalli Bullayya College of Engineering20210130-.pdf'%}" tabindex="-1" aria-disabled="true">NIRF-2021</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" target="blank" href="https://formbuilder.ccavenue.com/live/the-society-for-collegiate-education">Online Payment</a>
-                    </li>
+                        <a class="nav-link active" href="{% url 'home'%}">Main Home</a>
+                    </li> 
 
                 </ul>
 
@@ -133,85 +125,84 @@
         </div>
     </nav>
     <!-- ending of navbar -->
-<!-- starting of body -->
+    <!-- starting of body -->
     <div class="container">
         <div class="row">
-            <div class="col-12 py-5 ">
-        <figure class="text-center">
-          <blockquote class="blockquote" style="font-family:  Roboto;">
-            <h2> PROFILE</h2>
-            
-          </blockquote>
-
-        </figure>
-        <div class="row">
-            <div class="col-12 p-2">
-                <p class="p-2">
-                    Woman is an embodiment of great human virtues and she is the greatest human resource of any society.
-                     Dr. Lankapalli Bullayya College of Engineering (for women) encourages and promotes women education and
-                      keeps its main focus on women empowerment and their personality development with which they can face 
-                      the challenges of modern world. The broad objective of the institution is to provide the right opportunities 
-                      to girl students for learning the higher skills in new technologies and building their extraordinary careers 
-                      in industry and research organizations.
-                </p>
-                <p class="p-2">
-                    Acclaimed by the student community as an outstanding women engineering college in the smart city Visakhapatnam,
-                     Andhra Pradesh, Dr. Lankapalli Bullayya College of Engineering (for women), 
-                     was established by The Society for Collegiate Education in 2010 with the objective to 
-                     produce women technologists and scientists who would engage in research, 
-                    design and development to help building the nation. Our Campus is ideally located in the heart of the city on 10 acre land.
-                </p>
-                <p class="p-2">
-                    The college is equipped with state-of-the-art infrastructure and it offers high standard technical training.
-                     The college offershighly preferred engineering study programs namely :
-                </p>
-                <ul class="list-group p-2">
-                    <li class="list-group-item">
-                        CSE: Computer Science Engineering
-                    </li>
-                    <li class="list-group-item">
-                        CIVIL: Civil Engineering 
-                    </li>
-                    <li class="list-group-item">
-                        EEE: Electrical and Electronics Engineering
-                    </li>
-                    <li class="list-group-item">
-                        ECE: Electrical and Communication Engineering
-                    </li>
-                    <li class="list-group-item">
-                        BS: Basic Sciences
-                    </li>
-                </ul>
-                <p class="p-2">
-                    The curriculum places emphasis on basic topics in engineering sciences, design and experimental methods. The College’s faculty and staff
-                     strive hard with their limitless potential and technical expertise to create ingenious Engineers.
-                </p>
-                <p class="p-2">
-                    Striving hard with a core policy of empowering women through technical education, the college provides all facilities 
-                    for imparting employability skills to girl students. It has set a big mission of disseminating engineering education to
-                     women and making them proficient technocrats. It has a clear vision of imparting value based and high standard technical 
-                     education to women and to enable them face the global competition and knowledge challenges of 21st century. 
-                    The college is now stretching its legs towards glorious destinations in technical education
-                </p>
-                <p class="p-2">
-                    The campus life is a perfect learning ambience to aspiring students with facilities such as well-staked modern e-library, large seminar halls, fully furnished laboratories, up to date language laboratories, spacious class rooms, multi-sport play Ground, health centre and cafeteria. The Wi-Fi & Internet includes continuous and uninterrupted internet connectivity to students and faculty members. 
-                    The Internal Quality Assurance Cell constantly monitors the academic progress of students and the teaching efficiency of the teachers.
-                </p>
-                <p class="p-2">
-                    Proper care is taken to develop student’s overall personality, bringing out the students hidden virtues through activities such as NCC, NSS, Sports, Nature Club, literary and cultural competitions.
-                     The College enjoys outstanding success in inter-university sports competitions producing many top class sports personalities.
-                </p>
-                <p class="p-2">
-                    Safety & Security of girl students is the primary concern of the college. It is a highly Secured and Sophisticated Campus which provides UV treated safe drinking water for entire campus and well experienced security personnel positioned at all the gates.
-                     The entire college campus is kept under the surveillance of CCTV Camera for making the college a ragging free campus.
-                </p>
-                <p class="p-2">
-                    Girl students who are seeking to improve their technological knowledge, transform themselves into promising personalities or enrich their lives through scientific education, Dr. L. Bullayya College is the right choice for them. The college fraternity feel honored to partner with such aspiring students in their educational journey. 
-                    The students, staff and the members of the governing body, encourage you to learn more about us by visiting our campus.
-                </p>
+            <div class="col-12 text-center">
+                <h3 class="p-4">
+                    PROFILE(BS&H)
+                </h3>
+                <h4 class="p-1">
+                    Dr.L.B.College of Engneering <br>
+                    BASIC SCIENCES
+                </h4>
             </div>
         </div>
-      </div>
+        <div class="row">
+            <h5 class="p-1">
+                About BS & H
+            </h5>
+            <p class="p-2">
+                Department of Basic Sciences & Humanities was launched in the year 2010 to function under the umbrella of Dr. Lankapalli Bullayya College of Engineering which was established by the Society for Collegiate Education, Visakhapatnam. State-of-the-art infrastructure is provided for creating Perfect Learning Ambience and a team of Highly Qualified and Committed Teachers strive incessantly to train the budding engineers and technologists.
+            </p>
+            <p class="p-2">
+                The Prime Objective of the department is to impart fundamental concepts in Engineering Mathematics, Engineering Chemistry, Engineering Physics, English, Soft Skills, Environmental Studies and Physical Education. Students learn the Basic Principles and Laws in Theoretical Mathematics, Chemistry and Physics in the first year of their study and such knowledge enables them to learn the Practical Applications in Applied Sciences such as Computers, Electricals, Electronics, Communication, Civil etc.
+            </p>
+            <p class="p-2">
+                The department also provides adequate facilities for students to acquire knowledge from various sources such as Well Stacked Department Libraries, Fully- Furnished Science Laboratories and Language Laboratories. Alongside these core subjects and domain skills, Soft Skills training is provided to deal with students’ inner Engineering namely enhancing their confidence levels and developing their leadership qualities. Spacious Air-conditioned Seminar Halls are used for conducting Workshops and Symposia. Skill Development Centre serves as one of the wings of the college and it conducts Placement Drives. It immensely helps the students in sharpening their skills for securing the lucrative jobs in the Private and Public Sector Organizations.
+            </p>
+            <p class="p-2">
+                The Uninterrupted Internet Facility provides continuous Wi-Fi connectivity to students and faculty members. The Internal Quality Assurance Cell (IQAC) another important unit in the college, constantly monitors the academic progress of students and the teaching efficiency of the teachers. Proper care is taken to develop student’s overall personality, bringing out the students hidden virtues through activities such as NCC, NSS, Sports, Nature Club, Literary and Cultural Competitions. Some faculty members in the department have been serving as Major in NCC, NSS Program Officer, Physical Director and Cultural Coordinator. The entire college campus is kept under the surveillance of CCTV Camera for making the college a ragging free campus.
+            </p>
+
+            <h5 class="p-3">
+                Salient Features:
+            </h5>
+
+            <ul class="p-4">
+                <li>
+                    Renowned and Highly qualified Faculty
+                </li>
+                <li>
+                    Specious and Well equipped Class rooms
+                </li>
+                <li>
+                    Well-equipped Labs
+                </li>
+                <li>
+                    Toilets and Water Coolers with water purifier on each floor
+                </li>
+                <li>
+                    Specious Hall for indoor games and playground
+                </li>
+                <li>
+                    Display Boards
+                </li>
+                <li>
+                    L C D Projectors in each department
+                </li>
+                <li>
+                    College is under surveillance of CCTV
+                </li>
+                <li>
+                    Periodical Parent Teachers meets
+                </li>
+                <li>
+                    Career and Psychological Counseling
+                </li>
+                <li>
+                    Ragging is strictly prohibited
+                </li>
+                <li>
+                    Anti-Ragging and Anti Sexual harassment Committee
+                </li>
+                <li>
+                    First AID kits and women waiting hall
+                </li>
+                <li>
+                    Preventive methods as per Covid -19 precautions
+                </li>
+            </ul>
         </div>
     </div>
     <!-- ending of body -->

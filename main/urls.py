@@ -46,8 +46,8 @@ urlpatterns = [
     
     path('bs/faculty', views.bsfaculty, name='bsfaculty'),
     path('bs/home', views.bshome, name='bshome'),
-    path('bs/profile', views.bsfaculty, name='bsprofile'),
-    path('bs/hod', views.bshome, name='bshod'),
+    path('bs/profile', views.bsprofile, name='bsprofile'),
+    path('bs/hod', views.bshod, name='bshod'),
     path('bs/activities', views.bsfaculty, name='bsactivities'),
     path('bs/faculty/<str:name>/', profileview.profileview, name='profilebstemplate'),
 

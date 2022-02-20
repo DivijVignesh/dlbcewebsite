@@ -111,3 +111,15 @@ def bsfaculty(request):
 def bshome(request):
     
 	return render(request, 'bs.html', {})
+def bshod(request):
+    
+	return render(request, 'bshod.html', {})
+
+def bsprofile(request):
+    
+	return render(request, 'bsprofile.html', {})
+def bsactivities(request):
+    
+	return render(request, 'bsfaculty.html', {})
+
+
