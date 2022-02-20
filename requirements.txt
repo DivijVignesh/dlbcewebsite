@@ -55,17 +55,11 @@ mysqlclient==2.0.3
 
 
 
-olefile==0.46
-
-
-parso==0.7.0
 
 
 pathspec==0.7.0
 
 
-
-pkginfo==1.7.0
 
 
 ply==3.11
@@ -74,7 +68,7 @@ ply==3.11
 
 
 
-pyodbc===4.0.0-unsupported
+
 
 
 pyreadline==2.1
