@@ -13,10 +13,12 @@ from django.shortcuts import (get_object_or_404,
                               render,
                               HttpResponseRedirect)
 config = {
-    'user': 'djangouser',
-    'password': 'password',
-    'host': 'localhost',
-    'database': 'lbcewebsite'
+
+    # 'username':'lbce$lbce',
+    'user': 'lbce',
+    'password': 'password007',
+    'host': 'lbce.mysql.pythonanywhere-services.com',
+    # 'database': 'lbce'
 }
 
 def profileview(request,name):
@@ -24,7 +26,7 @@ def profileview(request,name):
     cursor = cnx.cursor()
     # query = ("SELECT fullname, phone,branch,batch,rollno,classname,email,username from tblprofile")
 
-    query = ("SELECT * from facultyinfo where name='"+name+"'")
+    query = ("SELECT * from `lbce$lbce`.`facultyinfo` where name='"+name+"'")
     cursor.execute(query)
     # results = next(cursor.stored_results()).fetchall()
     print(cursor)
